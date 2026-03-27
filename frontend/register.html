@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register | Startup Idea Analyser</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body class="auth-page">
+    <main class="auth-layout fade-in">
+      <section class="auth-side">
+        <p class="eyebrow">Get Started</p>
+        <h1>Create your account and test startup ideas with instant feedback.</h1>
+        <p>
+          Register to submit ideas, compare them with reference concepts, and see improvement
+          suggestions right away.
+        </p>
+      </section>
+
+      <section class="auth-card">
+        <div id="message-box" class="message-box hidden"></div>
+        <form id="register-form" class="auth-form">
+          <h2>Register</h2>
+          <label for="register-name">Full Name</label>
+          <div class="input-wrap">
+            <input type="text" id="register-name" placeholder="Your full name" required />
+          </div>
+          <p id="register-name-error" class="field-error hidden"></p>
+
+          <label for="register-email">Email</label>
+          <div class="input-wrap">
+            <input type="email" id="register-email" placeholder="you@example.com" required />
+          </div>
+          <p id="register-email-error" class="field-error hidden"></p>
+
+          <label for="register-password">Password</label>
+          <div class="input-wrap password-wrap">
+            <input type="password" id="register-password" placeholder="Create password" required />
+            <button type="button" class="toggle-password" data-target="register-password" aria-label="Toggle password visibility">
+              <span class="eye-icon" aria-hidden="true">&#128065;</span>
+            </button>
+          </div>
+          <p id="register-password-error" class="field-error hidden"></p>
+
+          <label for="register-confirm-password">Confirm Password</label>
+          <div class="input-wrap password-wrap">
+            <input
+              type="password"
+              id="register-confirm-password"
+              placeholder="Re-enter password"
+              required
+            />
+            <button
+              type="button"
+              class="toggle-password"
+              data-target="register-confirm-password"
+              aria-label="Toggle confirm password visibility"
+            >
+              <span class="eye-icon" aria-hidden="true">&#128065;</span>
+            </button>
+          </div>
+          <p id="register-confirm-password-error" class="field-error hidden"></p>
+
+          <label for="register-phone">Phone Number</label>
+          <div class="input-wrap">
+            <input type="tel" id="register-phone" placeholder="+91 98765 43210" required />
+          </div>
+          <p id="register-phone-error" class="field-error hidden"></p>
+
+          <label for="register-role">Role</label>
+          <div class="input-wrap">
+            <select id="register-role" required>
+              <option value="user">User</option>
+              <option value="admin">Admin</option>
+            </select>
+          </div>
+          <p id="register-role-error" class="field-error hidden"></p>
+
+          <button type="submit" class="primary-button">Register</button>
+        </form>
+        <p class="hint">Already have an account? <a class="text-link" href="./login.html">Login</a></p>
+      </section>
+    </main>
+
+    <script src="./js/utils.js"></script>
+    <script src="./js/auth.js"></script>
+  </body>
+</html>

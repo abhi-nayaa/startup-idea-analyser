@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Idea Details | Startup Idea Analyser</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <main class="app-layout">
+      <aside class="sidebar">
+        <div>
+          <p class="eyebrow">User Panel</p>
+          <h2 class="sidebar-title">Startup Idea Analyser</h2>
+        </div>
+        <nav class="sidebar-nav">
+          <a href="./dashboard.html">Dashboard</a>
+          <a class="active" href="./my-ideas.html">My Ideas</a>
+          <button id="logout-button" class="sidebar-logout">Logout</button>
+        </nav>
+      </aside>
+
+      <section class="content-area">
+        <header class="content-header">
+          <div>
+            <p class="eyebrow">Idea Details</p>
+            <h1>Full analysis view</h1>
+          </div>
+        </header>
+
+        <div id="details-message" class="message-box hidden"></div>
+        <section id="idea-details-card" class="panel"></section>
+      </section>
+    </main>
+
+    <script src="./js/utils.js"></script>
+    <script src="./js/ideas.js"></script>
+  </body>
+</html>

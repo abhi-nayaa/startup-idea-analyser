@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Dashboard | Startup Idea Analyser</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <main class="app-layout">
+      <aside class="sidebar">
+        <div>
+          <p class="eyebrow">User Panel</p>
+          <h2 class="sidebar-title">Startup Idea Analyser</h2>
+        </div>
+        <nav class="sidebar-nav">
+          <a class="active" href="./dashboard.html">Dashboard</a>
+          <a href="./my-ideas.html">My Ideas</a>
+          <a href="./analysis.html">Analysis</a>
+          <button id="logout-button" class="sidebar-logout">Logout</button>
+        </nav>
+      </aside>
+
+      <section class="content-area">
+        <header class="content-header">
+          <div>
+            <p class="eyebrow">Dashboard</p>
+            <h1 id="welcome-title">Welcome back</h1>
+          </div>
+        </header>
+
+        <div id="dashboard-message" class="message-box hidden"></div>
+
+        <div class="content-grid">
+          <article class="panel">
+            <h2>Submit an idea</h2>
+            <form id="idea-form" class="auth-form">
+              <label>
+                Title
+                <input type="text" id="idea-title" placeholder="Smart waste tracking platform" required />
+              </label>
+              <label>
+                Description
+                <textarea
+                  id="idea-description"
+                  rows="8"
+                  placeholder="Describe your idea in detail including:
+- target users
+- market demand
+- technology used
+- uniqueness"
+                  minlength="50"
+                  required
+                ></textarea>
+              </label>
+              <button type="submit" class="primary-button">Analyse Idea</button>
+            </form>
+          </article>
+
+          <article class="panel">
+            <h2>Analysis Redirect</h2>
+            <div id="analysis-result" class="empty-state">
+              Submit an idea and you will be redirected to the dedicated analysis page with score
+              breakdown, progress bars, and final evaluation.
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/utils.js"></script>
+    <script src="./js/dashboard.js"></script>
+  </body>
+</html>

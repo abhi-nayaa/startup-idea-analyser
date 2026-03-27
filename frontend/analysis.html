@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analysis | Startup Idea Analyser</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <main class="app-layout">
+      <aside class="sidebar">
+        <div>
+          <p class="eyebrow">User Panel</p>
+          <h2 class="sidebar-title">Startup Idea Analyser</h2>
+        </div>
+        <nav class="sidebar-nav">
+          <a href="./dashboard.html">Dashboard</a>
+          <a href="./my-ideas.html">My Ideas</a>
+          <a class="active" href="./analysis.html">Analysis</a>
+          <button id="logout-button" class="sidebar-logout">Logout</button>
+        </nav>
+      </aside>
+
+      <section class="content-area">
+        <header class="content-header">
+          <div>
+            <p class="eyebrow">Analysis Page</p>
+            <h1>Detailed idea analysis</h1>
+          </div>
+        </header>
+
+        <div id="analysis-message" class="message-box hidden"></div>
+
+        <section class="panel">
+          <h2 id="analysis-idea-title">Idea title</h2>
+          <p id="analysis-idea-description" class="idea-text"></p>
+        </section>
+
+        <section class="content-grid">
+          <article class="panel">
+            <h2>Score Breakdown</h2>
+            <div class="score-list">
+              <div class="score-row">
+                <div class="score-labels">
+                  <span>Market Demand</span>
+                  <strong id="market-score-value">0/25</strong>
+                </div>
+                <div class="progress-track"><div id="market-score-bar" class="progress-bar"></div></div>
+              </div>
+              <div class="score-row">
+                <div class="score-labels">
+                  <span>Competition Level</span>
+                  <strong id="competition-score-value">0/25</strong>
+                </div>
+                <div class="progress-track"><div id="competition-score-bar" class="progress-bar"></div></div>
+              </div>
+              <div class="score-row">
+                <div class="score-labels">
+                  <span>Feasibility</span>
+                  <strong id="feasibility-score-value">0/25</strong>
+                </div>
+                <div class="progress-track"><div id="feasibility-score-bar" class="progress-bar"></div></div>
+              </div>
+              <div class="score-row">
+                <div class="score-labels">
+                  <span>Innovation</span>
+                  <strong id="innovation-score-value">0/25</strong>
+                </div>
+                <div class="progress-track"><div id="innovation-score-bar" class="progress-bar"></div></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel">
+            <h2>Final Evaluation</h2>
+            <div class="stat-grid">
+              <div class="stat-card">
+                <p class="eyebrow">Idea Score</p>
+                <h3 id="total-score-value">0/100</h3>
+              </div>
+              <div class="stat-card">
+                <p class="eyebrow">Success Probability</p>
+                <h3 id="success-probability-value">0%</h3>
+              </div>
+            </div>
+
+            <div class="analysis-box">
+              <p><strong>Matched reference idea:</strong> <span id="matched-idea-value">-</span></p>
+              <p><strong>Suggestion:</strong> <span id="suggestion-value">-</span></p>
+            </div>
+
+            <div class="best-idea-box">
+              <p><strong>Best improved idea:</strong></p>
+              <p id="best-improved-idea-value">-</p>
+            </div>
+
+            <button id="view-swot-button" class="primary-button section-button">View SWOT Analysis</button>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <script src="./js/utils.js"></script>
+    <script src="./js/analysis.js"></script>
+  </body>
+</html>

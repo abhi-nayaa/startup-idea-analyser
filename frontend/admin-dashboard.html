@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard | Startup Idea Analyser</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <main class="app-layout">
+      <aside class="sidebar">
+        <div>
+          <p class="eyebrow">Admin Panel</p>
+          <h2 class="sidebar-title">Startup Idea Analyser</h2>
+        </div>
+        <nav class="sidebar-nav">
+          <a class="active" href="./admin-dashboard.html">Add Idea</a>
+          <a href="#user-ideas-section">View User Ideas</a>
+          <button id="admin-logout-button" class="sidebar-logout">Logout</button>
+        </nav>
+      </aside>
+
+      <section class="content-area">
+        <header class="content-header">
+          <div>
+            <p class="eyebrow">Admin Dashboard</p>
+            <h1 id="admin-welcome-title">Manage platform ideas</h1>
+          </div>
+        </header>
+
+        <div id="admin-message" class="message-box hidden"></div>
+
+        <div class="content-grid">
+          <article class="panel">
+            <h2>Add admin idea</h2>
+            <form id="admin-idea-form" class="auth-form">
+              <label>
+                Title
+                <input type="text" id="admin-idea-title" placeholder="AI budgeting coach" required />
+              </label>
+              <label>
+                Description
+                <textarea
+                  id="admin-idea-description"
+                  rows="7"
+                  placeholder="Describe the ideal startup idea and why it stands out."
+                  required
+                ></textarea>
+              </label>
+              <label>
+                Keywords
+                <input type="text" id="admin-idea-keywords" placeholder="finance, ai, coaching, budgeting" />
+              </label>
+              <button type="submit" class="primary-button">Save Idea</button>
+            </form>
+          </article>
+
+          <article class="panel">
+            <div class="panel-heading">
+              <h2>Reference ideas</h2>
+              <button id="rerun-analysis-button" class="secondary-button">Refresh Analysis</button>
+            </div>
+            <div id="admin-ideas-list" class="card-list"></div>
+          </article>
+        </div>
+
+        <section id="user-ideas-section" class="panel panel-spaced">
+          <h2>All user ideas</h2>
+          <div id="all-user-ideas-list" class="card-list"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="./js/utils.js"></script>
+    <script src="./js/admin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SWOT Analysis | Startup Idea Analyser</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <main class="app-layout">
+      <aside class="sidebar">
+        <div>
+          <p class="eyebrow">User Panel</p>
+          <h2 class="sidebar-title">Startup Idea Analyser</h2>
+        </div>
+        <nav class="sidebar-nav">
+          <a href="./dashboard.html">Dashboard</a>
+          <a href="./my-ideas.html">My Ideas</a>
+          <a href="./analysis.html">Analysis</a>
+          <a class="active" href="./swot.html">SWOT</a>
+          <button id="logout-button" class="sidebar-logout">Logout</button>
+        </nav>
+      </aside>
+
+      <section class="content-area">
+        <header class="content-header">
+          <div>
+            <p class="eyebrow">SWOT Analysis</p>
+            <h1>Idea strategy snapshot</h1>
+          </div>
+        </header>
+
+        <div id="swot-message" class="message-box hidden"></div>
+
+        <section class="panel">
+          <h2 id="swot-idea-title">Idea title</h2>
+          <p id="swot-idea-description" class="idea-text"></p>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading">
+            <h2>AI Insight</h2>
+            <span id="saturation-badge" class="saturation-badge">Competition</span>
+          </div>
+          <p id="smart-feedback" class="idea-text"></p>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading">
+            <h2>Similar Startup Finder</h2>
+          </div>
+          <div id="similar-startups" class="card-list"></div>
+        </section>
+
+        <section class="swot-grid">
+          <article class="panel swot-card swot-strengths">
+            <h2>Strengths</h2>
+            <ul id="swot-strengths" class="swot-list"></ul>
+          </article>
+          <article class="panel swot-card swot-weaknesses">
+            <h2>Weaknesses</h2>
+            <ul id="swot-weaknesses" class="swot-list"></ul>
+          </article>
+          <article class="panel swot-card swot-opportunities">
+            <h2>Opportunities</h2>
+            <ul id="swot-opportunities" class="swot-list"></ul>
+          </article>
+          <article class="panel swot-card swot-threats">
+            <h2>Threats</h2>
+            <ul id="swot-threats" class="swot-list"></ul>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <script src="./js/utils.js"></script>
+    <script src="./js/swot.js"></script>
+  </body>
+</html>
